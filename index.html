@@ -2,12 +2,78 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мослента</title>
+        <link rel="stylesheet" href="styles/moslenta.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="styles/swiper.min.css" media="screen" charset="utf-8">
     </head>
     <body>
 
 
+        <div class="swiper-container first-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide content-slide">
+
+                    <div class="like cover" style="opacity: 0">
+                        LIKE
+                    </div>
+
+                    <div class="dislike cover" style="opacity: 0">
+                        DISLIKE
+                    </div>
+
+                    <div class="article">
+                        <h1 class="article-header article__title article__title_size_xl"></h1>
+                        <div class="article-content"></div>
+                        <div class="buttons">
+                            <div class="like-btn">
+                                +
+                            </div>
+                            <div class="dislike-btn">
+                                −
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide empty-slide"></div>
+                <div class="swiper-slide empty-slide"></div>
+            </div>
+        </div>
+
+        <div class="swiper-container second-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide content-slide">
+
+                    <div class="like cover" style="opacity: 0">
+                        LIKE
+                    </div>
+
+                    <div class="dislike cover" style="opacity: 0">
+                        DISLIKE
+                    </div>
+
+                    <div class="article">
+                        <h1 class="article-header article__title article__title_size_xl"></h1>
+                        <div class="article-content"></div>
+                        <div class="buttons">
+                            <div class="like-btn">
+                                +
+                            </div>
+                            <div class="dislike-btn">
+                                −
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide empty-slide"></div>
+                <div class="swiper-slide empty-slide"></div>
+            </div>
+        </div>
+
+
+        <script src="scripts/jquery-1.12.0.min.js" charset="utf-8"></script>
+        <script src="scripts/swiper.jquery.min.js" charset="utf-8"></script>
         <script src="scripts/script.js" charset="utf-8"></script>
     </body>
 </html>
