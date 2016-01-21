@@ -87,7 +87,7 @@ html, body {
 
 .buttons{
     font-size: 50px;
-    width: 100px;
+    width: 115px;
     margin: auto;
     cursor: pointer;
 
@@ -95,21 +95,19 @@ html, body {
 
 .buttons div{
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-top: 20px;
-    line-height: 30px;
-    padding-left: 5px;
+    line-height: 40px;
+    padding-left: 10px;
+    border-radius: 25px;
+    color: #fff;
 }
 
 .like-btn {
-    color: #fff;
     background-color: #3ea301;
-    border-radius: 20px;
 }
 
 .dislike-btn {
-    color: #fff;
     background-color: #ed1100;
-    border-radius: 20px;
 }

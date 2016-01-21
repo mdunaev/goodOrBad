@@ -30,14 +30,17 @@ var swiperParams = {
     },
     onSlideNextEnd: function(swiper){
         getNextArticle();
-        console.log('dislike');
+
+        // $.post( DISLIKE_URL ); // SEND POST MESSAGE - DISLIKE
+
     }.bind(this),
     onSlidePrevEnd: function(swiper){
         getNextArticle();
-        console.log('like');
+
+        // $.post( LIKE_URL ); // SEND POST MESSAGE - DISLIKE
+
     }.bind(this)
 };
-
 
 $('.content-slide').on('change', function(e){
     e.stopPropagation();
@@ -47,19 +50,15 @@ $('.content-slide').on('change', function(e){
 var swiper1 = new Swiper ('.first-container',  $.extend({}, swiperParams) );
 var swiper2 = new Swiper ('.second-container', $.extend({}, swiperParams) );
 
-
 var currentArticle = {};
 var nextArticle = {};
 
 var topContainer = $('.first-container');
 var bottomContainer = $('.second-container');
 
-//
-// Mr.Backender, please, fix code here ↓↓↓
-//
 function getNextArticle(){
 
-    var jsonURL = 'news.json';
+    var jsonURL = 'news.json'; // GET NEW ARTICLE URL
 
     $.getJSON(jsonURL, function(data){
         currentArticle = nextArticle;
@@ -100,12 +99,10 @@ function getNextArticle(){
 
 getNextArticle();
 
-
-
 $('.like-btn').click(function(){
-    swiper1.slidePrev();
+    swiper1.slidePrev(true, 300);
 }.bind(this));
 
 $('.dislike-btn').click(function(){
-    swiper1.slideNext();
+    swiper1.slideNext(true, 300);
 }.bind(this));
