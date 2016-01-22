@@ -5,16 +5,10 @@ var swiperParams = {
 
         if(transition<0.25){
             var percent = 1-(transition-0.17)/0.08;
-            $('.top-container .like').stop();
-            $('.top-container .like').animate({
-                opacity: percent
-            }, 10);
+            $('.top-container .like').css('opacity', percent);
         } else {
             var percent = (transition-0.25)/0.10;
-            $('.top-container .dislike').stop();
-            $('.top-container .dislike').animate({
-                opacity: percent
-            }, 10);
+            $('.top-container .dislike').css('opacity', percent );
         }
 
         var scroll = $('.top-container .content-slide').scrollTop();
@@ -85,10 +79,6 @@ function getNextArticle(){
 
         bottomContainer.removeClass('top-container');
         bottomContainer.addClass('bottom-container');
-
-        $('.cover').animate({
-            opacity: 0
-        });
 
         $('.cover').css('top', 0 );
         $('.cover').css('bottom', 0 );
